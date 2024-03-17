@@ -33,8 +33,8 @@ To use Telit in Waveshare as USB modem, just following is needed:
 * Create or `adb push` `/etc/initscripts/start_webcm_telit`.
 * Make symlink `ln -s /lib/systemd/system/webcm-telit.service /lib/systemd/system/multi-user.target.wants/webcm-telit.service`.
 
-[!TIP]
-enable write: `mount -o remount,rw /`, back to read-only `mount -o remount,ro /`
+> [!TIP]
+> enable write: `mount -o remount,rw /`, back to read-only `mount -o remount,ro /`
 
 Reboot the Telit, connect Waveshare to the PC using ethernet cable. Access Telit's web interface at `http://192.168.225.1/`. Log in using ID: `user` PW: `1234`. Update following:
 * In Device Setting -> USIM Management: disable HOT Swap
@@ -54,7 +54,9 @@ Per default, Telit does NAT between WWAN and LAN. To enable IPv4 passtrough (PC 
 ```
 (xx:xx:xx:xx:xx:xx being MAC of your PC / router where Waveshare will be connected)
 
-[!NOTE]
-Both LEDs on ethernet port are on constantly. Probably r8125 driver issue.
+---
+
+> [!NOTE]
+> Both LEDs on ethernet port are on constantly. Probably r8125 driver issue.
 
 Further reading: [Quectel modem with similar box](https://github.com/natecarlson/quectel-rgmii-configuration-notes)
