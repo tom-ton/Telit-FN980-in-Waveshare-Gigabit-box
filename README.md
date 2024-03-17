@@ -1,8 +1,8 @@
-# Telit FN980 in Waveshare 5G M.2 to Gigabit ETH
+# Telit FN980 in Waveshare 5G M.2 to Gigabit Ethernet
 
-[Telit FN980] (https://www.telit.com/devices/fn980-and-fn980m-data-cards-support-5g/)
+[Telit FN980](https://www.telit.com/devices/fn980-and-fn980m-data-cards-support-5g/)
 
-[Waveshare] (https://www.waveshare.com/5g-m.2-to-gigabit-eth.htm)
+[Waveshare 5G M.2 to Gigabit Ethernet](https://www.waveshare.com/5g-m.2-to-gigabit-eth.htm)
 
 ## Hardware updates
 Box accepts 3042 and 3052 M.2 modules. Modem is 3050 module and height is 3.4 mm; components are equipped on both sides of PCB. Standoff nut for 3042 module soldered on Waveshare's board obstacles Telit to be properly mounted:
@@ -52,4 +52,4 @@ Per default, Telit does NAT betweem WWAN and LAN. To enable IPv4 passtrough (PC 
 (xx:xx:xx:xx:xx:xx being MAC of your PC / router where Waveshare will be connected)
 
 Further reading:
-[Quectel modem with similar box] (https://github.com/natecarlson/quectel-rgmii-configuration-notes)
+[Quectel modem with similar box](https://github.com/natecarlson/quectel-rgmii-configuration-notes)
