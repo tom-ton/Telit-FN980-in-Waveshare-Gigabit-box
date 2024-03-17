@@ -1,0 +1,33 @@
+#  ---------------------------------------------------------------------------
+#   				WEBCM Telit Daemon
+#  ---------------------------------------------------------------------------
+#
+
+#! /bin/sh
+#
+# init.d script for WEBCM Telit daemon
+
+set -e
+
+case "$1" in
+       start)
+                echo -n "Starting WEBCM Telit Daemon: "
+                start-stop-daemon -S -b -x /usr/bin/twebcm_web_client -a /usr/bin/twebcm_web_client
+                echo "done"
+                ;;
+       stop)
+                echo -n "Stopping WEBCM Telit Daemon: "
+                start-stop-daemon -K -x /usr/bin/twebcm_web_client
+                echo "done"
+                ;;
+       restart)
+                $0 stop
+                $0 start
+                ;;
+       *)
+                echo "Usage: start_webcm_telit { start | stop | restart }" >&2
+                exit 1
+                ;;
+esac
+
+exit 0
